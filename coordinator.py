@@ -46,11 +46,14 @@ def main():
         try:
             # print(request)
             data = request.form.get('key')
+            print('text from student ', data,file=f)
             result=list(predict_tags(data))
             res={}
             for i,tag in enumerate(result):
                 res.update({i:tag})
+            print(res,file=f)
             return json.dumps(res,ensure_ascii=False).encode('utf8')
+
         except Exception as e:
             print(type(e),e,file=f)
 if __name__ == '__main__':
