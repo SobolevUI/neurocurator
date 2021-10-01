@@ -24,7 +24,6 @@ def converter(sentence): #convert text to normal form ### добавлены ф�
     list[0] = ' ' + list[0]
     return ' '.join(list)
 a='использую функцию show(some_info)'
-print(converter(a))
 
 def clear_text(new_text):
 
@@ -40,7 +39,6 @@ def predict_tags(a):
   
   a=clear_text(a)
   a=converter(a)
-  print(a)
   keys=[ key_words[i] for i in key_words.keys() if i in a.lower()]
   return set(keys)
 
