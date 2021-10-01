@@ -7,7 +7,6 @@ import pymorphy2
 import json
 from flask import Flask, jsonify, request
 import string
-# model=load_model('modell_curator.h5')
 log_file_coordinator='logs_coordinator.txt'
 with open('./key_words_coordinator.json', 'r') as fp:
     key_words = json.load(fp)
@@ -34,7 +33,6 @@ def predict_tags(a):
   
   a=clear_text(a)
   a=converter(a)
-  print(a)
   keys=[ key_words[i] for i in key_words.keys() if i in a.lower()]
   return set(keys)
 
