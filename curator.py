@@ -23,7 +23,6 @@ def converter(sentence): #convert text to normal form ### добавлены ф�
     list[-1] = list[-1] + ' '
     list[0] = ' ' + list[0]
     return ' '.join(list)
-a='использую функцию show(some_info)'
 
 def clear_text(new_text):
 
